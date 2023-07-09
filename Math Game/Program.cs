@@ -1,8 +1,7 @@
-﻿string operation;
-
-string option = Menu();
-string Menu()
+﻿Menu();
+void Menu()
 {
+    string operation;
     string option;
     Console.WriteLine("MATH GAME");
     Console.WriteLine("p. Play");
@@ -10,35 +9,36 @@ string Menu()
     Console.WriteLine("e. Exit");
     Console.Write("Choose: ");
     option = Console.ReadLine();
-    return option;
-}
-switch (option.Trim().ToLower())
-{
-    case "p":
-        Console.WriteLine("\na. +");
-        Console.WriteLine("s. -");
-        Console.WriteLine("m. *");
-        Console.WriteLine("d. /");
-        Console.Write("Choose an operator: ");
-        operation = Console.ReadLine();
-
-        Operator(operation);
-        break;
 
 
 
-    case "h":
-        Console.WriteLine("----------------------");
-        Console.WriteLine("HISTORY OF GAMES");
-        break;
+    switch (option.Trim().ToLower())
+    {
 
-    case "e":
-        Console.WriteLine("BYE");
-        break;
-    default:
-        Console.WriteLine("wrong");
-        Environment.Exit(1);
-        break;
+        case "p":
+            Console.WriteLine("\na. +");
+            Console.WriteLine("s. -");
+            Console.WriteLine("m. *");
+            Console.WriteLine("d. /");
+            Console.Write("Choose an operator: ");
+            operation = Console.ReadLine();
+            break;
+
+
+
+        case "h":
+            Console.WriteLine("----------------------");
+            Console.WriteLine("HISTORY OF GAMES");
+            break;
+
+        case "e":
+            Console.WriteLine("BYE");
+            break;
+        default:
+            Console.WriteLine("wrong");
+            Environment.Exit(1);
+            break;
+    }
 }
 void Operator(string operation)
 {
