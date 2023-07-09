@@ -1,8 +1,8 @@
 ﻿Menu();
 void Menu()
 {
-    string operation;
-    string option;
+    string? operation;
+    string? option;
     Console.WriteLine("MATH GAME");
     Console.WriteLine("p. Play");
     Console.WriteLine("h. History");
@@ -10,9 +10,7 @@ void Menu()
     Console.Write("Choose: ");
     option = Console.ReadLine();
 
-
-
-    switch (option.Trim().ToLower())
+    switch (option?.Trim().ToLower())
     {
 
         case "p":
@@ -22,9 +20,8 @@ void Menu()
             Console.WriteLine("d. /");
             Console.Write("Choose an operator: ");
             operation = Console.ReadLine();
+            Operator(operation);
             break;
-
-
 
         case "h":
             Console.WriteLine("----------------------");
@@ -34,6 +31,7 @@ void Menu()
         case "e":
             Console.WriteLine("BYE");
             break;
+
         default:
             Console.WriteLine("wrong");
             Environment.Exit(1);
