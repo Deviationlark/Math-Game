@@ -77,10 +77,7 @@
             Console.WriteLine("h. Hard");
             difficulty = Console.ReadLine();
             switch (difficulty.Trim().ToLower())
-            {
-                case "e":
-                    
-                    break;
+            
                
             }
         }
