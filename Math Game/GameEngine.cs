@@ -1,33 +1,26 @@
-﻿namespace Math_Game
+﻿using System.Security.Cryptography.X509Certificates;
+
+namespace Math_Game
 {
     internal class GameEngine
     {
-        internal void Operator(string operation)
+        internal int Low()
         {
-            switch (operation.Trim().ToLower())
-            {
-                case "a":
-                    AdditionGame("Addition Selected");
-                    break;
-                case "s":
-                    SubstractionGame("Subtraction Selected");
-                    break;
-                case "m":
-                    MultiplicationGame("Multiplication Selected");
-                    break;
-                case "d":
-                    DivisionGame("Division Selected");
-                    break;
-                default:
-                    Console.WriteLine("Invalid operation");
-                    Environment.Exit(1);
-                    break;
-            }
+            var diff = new Menu();
+            var low = 1;
+            return low;
+            switch(diff)
+            
+        }
+        internal int High()
+        {
+            var high = 9;
+            return high;
         }
         internal void AdditionGame(string message)
         {
             
-
+            
             var random = new Random();
             var score = 0;
 
@@ -38,8 +31,10 @@
             {
                 Console.Clear();
                 Console.WriteLine(message);
-                firstNumber = random.Next(1, 9);
-                secondNumber = random.Next(1, 9);
+                firstNumber = random.Next(Low(), High());
+                secondNumber = random.Next(Low(), High();
+
+                
 
                 Console.WriteLine($"{firstNumber} + {secondNumber}");
                 var result = Console.ReadLine();

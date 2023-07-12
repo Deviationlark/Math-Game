@@ -28,7 +28,7 @@
                         Console.WriteLine("d. /");
                         Console.Write("Choose an operator: ");
                         operation = Console.ReadLine();
-                        gameEngine.Operator(operation);
+                        Operator(operation);
                         break;
 
                     case "h":
@@ -48,41 +48,30 @@
         }
         internal void Operator(string operation)
         {
-            var operationInstance = new GameEngine();
-
-            switch (operation.Trim().ToLower())
+            if (operation == "a"||operation == "s" || operation == "m" || operation == "d")
             {
-                case "a":
-                    operationInstance.AdditionGame("Addition Selected");
-                    break;
-                case "s":
-                    operationInstance.SubstractionGame("Subtraction Selected");
-                    break;
-                case "m":
-                    operationInstance.MultiplicationGame("Multiplication Selected");
-                    break;
-                case "d":
-                    operationInstance.DivisionGame("Division Selected");
-                    break;
-                default:
-                    Console.WriteLine("Invalid operation");
-                    Environment.Exit(1);
-                    break;
+                Difficulty("Operation Selected");
             }
         }
-        internal void Difficulty(string difficulty)
-        { Console.WriteLine(@"Choose a Difficulty:");
+        public void Difficulty(string op)
+        {
+            Console.WriteLine(op);
+            var difficultyInstance = new GameEngine();
+            Console.WriteLine("\nChoose a Difficulty:");
             Console.WriteLine("e. Easy");
             Console.WriteLine("m. Medium");
             Console.WriteLine("h. Hard");
-            difficulty = Console.ReadLine();
-            switch (difficulty.Trim().ToLower())
+            var gameDifficulty = Console.ReadLine();
+            switch (gameDifficulty.Trim().ToLower())
             {
                 case "e":
-                    
-                    break;
-               
+
             }
+            
+            
         }
     } 
 }
+
+
+
