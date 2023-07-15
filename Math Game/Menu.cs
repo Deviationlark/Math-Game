@@ -61,17 +61,11 @@
             Console.WriteLine("e. Easy");
             Console.WriteLine("m. Medium");
             Console.WriteLine("h. Hard");
-            var gameDifficulty = Console.ReadLine();
-            switch (gameDifficulty.Trim().ToLower())
-            {
-                case "e":
-
+            difficulty = Console.ReadLine();
+            switch (difficulty.Trim().ToLower())
+            
+               
             }
-            
-            
         }
     } 
 }
-
-
-
